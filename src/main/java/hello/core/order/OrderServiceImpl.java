@@ -14,6 +14,18 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy discountPolicy;
 //    private final DiscountPolicy discountPolicy = new FixedDiscountPolicy();이러면 OCP 위반임, DIP 위반이기 떄문
 
+//    @Autowired
+//    public void setMemberRepository(MemberRepository memberRepository){
+//        System.out.println("memberRepository = " + memberRepository);
+//        this.memberRepository = memberRepository;
+//    };
+//
+//    @Autowired
+//    public void setDiscountPolicy(DiscountPolicy discountPolicy){
+//        System.out.println("discountPolicy = " + discountPolicy);
+//        this.discountPolicy = discountPolicy;
+//    }
+
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
